@@ -10,9 +10,7 @@ st.set_page_config(page_title="Cocktail Search", page_icon="📹")
 st.markdown("# Cocktail Search")
 st.sidebar.header("Cocktail Search")
 st.write(
-    """This app shows how you can use Streamlit to build cool animations.
-It displays an animated fractal based on the the Julia Set. Use the slider
-to tune different parameters."""
+    """Type the name of your desired cocktail in the space below."""
 )
 
 df = load_data('https://github.com/OzanGenc/CocktailAnalysis/raw/main/cocktails.csv')

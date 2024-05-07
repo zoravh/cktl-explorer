@@ -12,7 +12,7 @@ def run():
 
     st.write("# Welcome to your online Bartender! 👋")
 
-    st.sidebar.success("Select a feature above.")
+    st.sidebar.success("Select either search or filtering above.")
 
     st.markdown(
         """
