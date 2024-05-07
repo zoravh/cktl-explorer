@@ -32,9 +32,10 @@ def run():
         - **Filter Function**: Enables you to find cocktails based on specific criteria such as the number of ingredients, preferred alcohol base, desired glassware, and the overall vibe of the cocktail. After setting your filters, the app will display all matching cocktails. Just click on one to see more about it, similar to the search function.
         
         Dive in and start exploring the rich world of cocktails with us!  
-    """
-    )
+    """)
 
+    st.image('cocktail.jpg', caption='This could be yours!')
+    
 
 if __name__ == "__main__":
     run()
