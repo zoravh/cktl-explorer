@@ -10,7 +10,7 @@ def run():
         page_icon="👋",
     )
 
-    st.write("# Welcome to your online Bartender! 👋")
+    st.write("# Welcome to your online Bartender!")
 
     st.sidebar.success("Select either search or filtering above.")
 
