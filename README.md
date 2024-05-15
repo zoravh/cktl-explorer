@@ -4,7 +4,7 @@ Welcome to the Cocktail Connoisseur App, your digital guide to expanding your co
 
 ## Key Features
 
-- **Dynamic Data Loading**: Automatically retrieves the latest cocktail recipes from a CSV file hosted on GitHub.
+- **Dynamic Data Loading**: Automatically retrieves the latest cocktail recipes from a [CSV file hosted on GitHub](https://github.com/OzanGenc/CocktailAnalysis/blob/main/cocktails.csv).
 - **Interactive User Interface**: Built with Streamlit for seamless navigation and user interaction.
 - **Cocktail Search**: Search for cocktails by name to get detailed descriptions, including ingredients and preparation methods.
 - **Cocktail Filter**: Filter cocktails by number of ingredients, alcohol base, glassware, and vibe to discover new drinks tailored to your liking.
