@@ -2,20 +2,22 @@
 
 # On this page, cocktails can be found via a direct name-search
 
-import streamlit as st
+# import necessary package and functions
 import streamlit as st
 from utils import load_data
 
+# page formatting: setting title and description
 st.set_page_config(page_title="Cocktail Search", page_icon="📹")
 st.markdown("# Cocktail Search")
-st.sidebar.header("Cocktail Search")
+st.sidebar.header("Cocktail Search") 
 st.write(
     """Type the name of your desired cocktail in the space below."""
 )
 
+# load data from CocktailAnalysis repository on github
 df = load_data('https://github.com/OzanGenc/CocktailAnalysis/raw/main/cocktails.csv')
     
-#  Tab 2 Search by title
+# defining function for cocktail search tab, taking a df an input
 def display_cocktail_search(df):
     search_query = st.text_input("Search for a cocktail")
     if search_query:
@@ -32,5 +34,6 @@ def display_cocktail_search(df):
         else:
             st.write("No cocktails found with that name.")
 
+# applying cocktail search function to the loaded data
 display_cocktail_search(df)
 

@@ -1,13 +1,13 @@
+# Utils page
 
-import inspect
-import textwrap
+# import necessary packages and functions
 import streamlit as st
 import pandas as pd
 import requests
 import re
 from io import StringIO
 
-# Function to load data from a URL into a DataFrame
+# function to load data from a URL into a DataFrame
 def load_data(url):
     try:
         response = requests.get(url)
@@ -19,14 +19,12 @@ def load_data(url):
         st.error(f"Failed to retrieve data: {e}")
         return pd.DataFrame()  # Return empty DataFrame on error
 
-
-# Lists of filtered variables that were created by authors, not in the original database
+# Lists of filtered variables that were created by us authors, not in the original database
 
 # Alcohol
 alcohol_bases = ['Any', ' Vodka ', ' Rum ', ' Gin ', ' Tequila ', ' Whiskey ', ' Brandy ', ' Vermouth ', ' Liqueurs ', ' Absinthe ', ' Aquavit ', ' Sake ', ' Sherry ', ' Port ', ' Cachaca ', ' Pisco ', ' Mezcal ']
 
 # Vibe
-
 vibes = {
         'fruity': [
                 'lemon', 'lime', 'orange', 'berry', 'pineapple', 'mango', 'peach', 'apple',
@@ -49,8 +47,7 @@ vibes = {
                              ]
                 }
 
-# Functions to filter the datafram 
-
+# Functions to filter the dataframe 
 def ingredient_in_phrase(phrase, ingredients_list):
     phrase = phrase.lower()
     patterns = [re.escape(ingredient) for ingredient in ingredients_list]
@@ -67,13 +64,3 @@ def apply_filters(df, max_ingredients, alcohol_base, glassware, selected_vibe):
         filtered_df = filtered_df[filtered_df['Ingredients'].apply(lambda x: ingredient_in_phrase(x, vibes[selected_vibe]))]
     return filtered_df
 
-# original in this document
-
-def show_code(demo):
-    """Showing the code of the demo."""
-    show_code = st.sidebar.checkbox("Show code", True)
-    if show_code:
-        # Showing the code of the demo.
-        st.markdown("## Code")
-        sourcelines, _ = inspect.getsourcelines(demo)
-        st.code(textwrap.dedent("".join(sourcelines[1:])))

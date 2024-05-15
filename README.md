@@ -30,7 +30,15 @@ Whether you're a beginner eager to dive into the world of mixology or an experie
 
 ## Getting Started
 
-To start using the Cocktail Connoisseur App, follow these steps:
+### Running the app
+
+To start using the Cocktail Connoisseur App, just click the link below and enjoy your cocktail journey:
+
+[Check out the Cocktail Explorer!](https://cktl-explorer.streamlit.app)
+
+### Start coding
+
+To start coding with the Cocktail Connoisseur App, follow these steps:
 
 1. Clone the repository.
 2. Install required dependencies.
